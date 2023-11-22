@@ -15,6 +15,7 @@ namespace Stundenplanner
         static void Main()
         {
             Console.WriteLine("Hallo Welt");
+            Console.WriteLine("Test");
 
 
             Application.EnableVisualStyles();
