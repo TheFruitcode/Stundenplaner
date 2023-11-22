@@ -16,8 +16,8 @@ namespace Stundenplanner
         {
             Console.WriteLine("Hallo Welt");
             Console.WriteLine("Test");
-            Console.WriteLine("Online")
-            Console.WriteLine( "hosasdl");
+            Console.WriteLine("Online");
+            Console.WriteLine("hosasdl");
 
 
             Application.EnableVisualStyles();
