@@ -14,6 +14,9 @@ namespace Stundenplanner
         [STAThread]
         static void Main()
         {
+            Console.WriteLine("Hallo Welt");
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
