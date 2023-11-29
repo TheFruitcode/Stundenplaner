@@ -1,6 +1,6 @@
 ﻿namespace Stundenplanner
 {
-    partial class Form1
+    partial class View
     {
         /// <summary>
         /// Erforderliche Designervariable.
