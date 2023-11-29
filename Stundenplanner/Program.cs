@@ -19,7 +19,7 @@ namespace Stundenplanner
             Console.WriteLine("Online");
             Console.WriteLine("hosasdl");
             Console.WriteLine("sasd");
-            Console.WriteLine("Online")
+            Console.WriteLine("Online");
             Console.WriteLine( "Stefan");
 
 
