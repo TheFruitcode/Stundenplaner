@@ -15,10 +15,7 @@ namespace Stundenplanner
         static void Main()
         {
             Console.WriteLine("Hallo Welt");
-            Console.WriteLine("Test");
-            Console.WriteLine("Online");
-            Console.WriteLine("hosasdl");
-            Console.WriteLine("sasd");
+            
             Console.WriteLine("Online");
             Console.WriteLine( "Stefan");
 
