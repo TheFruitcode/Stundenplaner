@@ -30,65 +30,65 @@
         {
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.speichern_btn = new System.Windows.Forms.Button();
+            this.loeschen_btn = new System.Windows.Forms.Button();
+            this.termine_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(81, 36);
+            this.monthCalendar1.Location = new System.Drawing.Point(59, 36);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(81, 229);
+            this.richTextBox1.Location = new System.Drawing.Point(59, 226);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(178, 90);
+            this.richTextBox1.Size = new System.Drawing.Size(178, 97);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // button1
+            // speichern_btn
             // 
-            this.button1.Location = new System.Drawing.Point(81, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.speichern_btn.Location = new System.Drawing.Point(59, 347);
+            this.speichern_btn.Name = "speichern_btn";
+            this.speichern_btn.Size = new System.Drawing.Size(75, 23);
+            this.speichern_btn.TabIndex = 2;
+            this.speichern_btn.Text = "Speichern";
+            this.speichern_btn.UseVisualStyleBackColor = true;
+            this.speichern_btn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // loeschen_btn
             // 
-            this.button2.Location = new System.Drawing.Point(184, 348);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.loeschen_btn.Location = new System.Drawing.Point(162, 347);
+            this.loeschen_btn.Name = "loeschen_btn";
+            this.loeschen_btn.Size = new System.Drawing.Size(75, 23);
+            this.loeschen_btn.TabIndex = 3;
+            this.loeschen_btn.Text = "Loeschen";
+            this.loeschen_btn.UseVisualStyleBackColor = true;
+            this.loeschen_btn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // termine_btn
             // 
-            this.button3.Location = new System.Drawing.Point(81, 391);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 26);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.termine_btn.Location = new System.Drawing.Point(59, 391);
+            this.termine_btn.Name = "termine_btn";
+            this.termine_btn.Size = new System.Drawing.Size(178, 26);
+            this.termine_btn.TabIndex = 4;
+            this.termine_btn.Text = "Termine";
+            this.termine_btn.UseVisualStyleBackColor = true;
+            this.termine_btn.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(345, 475);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(309, 512);
+            this.Controls.Add(this.termine_btn);
+            this.Controls.Add(this.loeschen_btn);
+            this.Controls.Add(this.speichern_btn);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.monthCalendar1);
             this.Name = "Form1";
@@ -101,9 +101,9 @@
 
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button speichern_btn;
+        private System.Windows.Forms.Button loeschen_btn;
+        private System.Windows.Forms.Button termine_btn;
     }
 }
 
