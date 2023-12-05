@@ -1,8 +1,12 @@
-﻿using System;
+﻿using View.cs;
+using System;
 
 public class Speichern
 {
-	public Speichern()
+    calender = monthCalendar1_DateChanged;
+    beschreibung = richTextBox1_TextChanged;
+
+    public Speichern()
 	{
         string myConnectionString = "server=127.0.0.1; uid=root; pwd=''; database:stundenplaner;";
 
