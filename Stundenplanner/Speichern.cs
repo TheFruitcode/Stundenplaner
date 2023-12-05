@@ -1,5 +1,9 @@
 ﻿using View.cs;
 using System;
+using System.Windows.Forms;
+using System.Text;
+using System.ComponentModel;
+using System.Data;
 
 public class Speichern
 {
