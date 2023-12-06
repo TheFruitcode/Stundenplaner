@@ -1,0 +1,10 @@
+create database stundenplaner;
+
+use stundenplaner;
+
+create table TerminSpeichern(
+ID_Termine int not null auto_increment,
+Datum DATE,
+Beschreibung VARCHAR(255),
+primary key(ID_Termine)
+);
