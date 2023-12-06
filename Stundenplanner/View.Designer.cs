@@ -33,6 +33,7 @@
             this.speichern_btn = new System.Windows.Forms.Button();
             this.loeschen_btn = new System.Windows.Forms.Button();
             this.termine_btn = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -104,6 +105,7 @@
         private System.Windows.Forms.Button speichern_btn;
         private System.Windows.Forms.Button loeschen_btn;
         private System.Windows.Forms.Button termine_btn;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
