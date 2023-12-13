@@ -26,7 +26,11 @@ namespace WindowsFormsApp1
 
             MySqlCommand mycommand = conn.CreateCommand();
 
-            mycommand.CommandText = "Insert into TerminSpeichern (ID_Termine, Datum, Beschreibung) values();";
+            if button1_Click{
+                mycommand.CommandText = "Insert into TerminSpeichern (ID_Termine, Datum, Beschreibung) values("calender", "Terminbeschreibung");";
+            }
+            else { }
+
             conn.Close();
         }
     }
