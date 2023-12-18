@@ -38,7 +38,7 @@ namespace Stundenplanner
 
         private void laufende_Click(object sender, EventArgs e)
         {
-
+            controller.laufend();
         }
 
         private void abgelaufende_Click(object sender, EventArgs e)

@@ -113,6 +113,12 @@ namespace Stundenplanner
                 MessageBox.Show(e.Message);
             }
         }
+
+        public void laufend()
+        {
+            LaufendeAufgaben laufendeAufgaben = new LaufendeAufgaben();
+            laufendeAufgaben.Show();
+        }
     }
 }
 
