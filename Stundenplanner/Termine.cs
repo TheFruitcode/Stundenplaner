@@ -12,17 +12,29 @@ namespace Stundenplanner
 {
     public partial class Termine : Form
     {
-        public Termine()
+        Controller controller;
+        public Termine(Controller c)
         {
             InitializeComponent();
+            controller = c;
         }
 
-        public void addTermin(string Datum, string Info)
+        public void addTermin(string ID, string Datum, string Info)
         {
             string Terminladen = Terminliste.Text;
 
-            Terminladen = Terminladen + Datum + ":\n" + Info + "\n";
+            Terminladen = Terminladen + "(" + ID + ") " + Datum + " " + Info + "\n";
             Terminliste.Text = Terminladen;
+        }
+
+        private void TerminLoeschen_Click(object sender, EventArgs e)
+        {
+            controller.Terminauswahl_open();
+        }
+
+        public void clear_Termine()
+        {
+            Terminliste.Clear();
         }
     }
 }

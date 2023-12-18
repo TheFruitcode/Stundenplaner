@@ -18,16 +18,6 @@ namespace Stundenplanner
             InitializeComponent();
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void speichern_btn_Click(object sender, EventArgs e)
         {
             string calender = Calender.SelectionRange.Start.Year.ToString() + "-" + Calender.SelectionRange.Start.Month.ToString() + "-" + Calender.SelectionRange.Start.Day.ToString();
@@ -38,12 +28,22 @@ namespace Stundenplanner
 
         private void loeschen_btn_Click(object sender, EventArgs e)
         {
-            controller.Loeschen();
+            Terminbeschreibung.Text = controller.Loeschen();
         }
 
         private void termine_btn_Click(object sender, EventArgs e)
         {
             controller.Termin();
+        }
+
+        private void laufende_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void abgelaufende_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,6 +34,8 @@
             this.loeschen_btn = new System.Windows.Forms.Button();
             this.termine_btn = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.laufende = new System.Windows.Forms.Button();
+            this.abgelaufende = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Calender
@@ -41,7 +43,6 @@
             this.Calender.Location = new System.Drawing.Point(59, 36);
             this.Calender.Name = "Calender";
             this.Calender.TabIndex = 0;
-            this.Calender.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // Terminbeschreibung
             // 
@@ -50,7 +51,6 @@
             this.Terminbeschreibung.Size = new System.Drawing.Size(178, 97);
             this.Terminbeschreibung.TabIndex = 1;
             this.Terminbeschreibung.Text = "";
-            this.Terminbeschreibung.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // speichern_btn
             // 
@@ -82,11 +82,33 @@
             this.termine_btn.UseVisualStyleBackColor = true;
             this.termine_btn.Click += new System.EventHandler(this.termine_btn_Click);
             // 
+            // laufende
+            // 
+            this.laufende.Location = new System.Drawing.Point(59, 435);
+            this.laufende.Name = "laufende";
+            this.laufende.Size = new System.Drawing.Size(178, 23);
+            this.laufende.TabIndex = 5;
+            this.laufende.Text = "laufende Aufgaben";
+            this.laufende.UseVisualStyleBackColor = true;
+            this.laufende.Click += new System.EventHandler(this.laufende_Click);
+            // 
+            // abgelaufende
+            // 
+            this.abgelaufende.Location = new System.Drawing.Point(59, 464);
+            this.abgelaufende.Name = "abgelaufende";
+            this.abgelaufende.Size = new System.Drawing.Size(178, 23);
+            this.abgelaufende.TabIndex = 6;
+            this.abgelaufende.Text = "abgelaufene Aufgaben";
+            this.abgelaufende.UseVisualStyleBackColor = true;
+            this.abgelaufende.Click += new System.EventHandler(this.abgelaufende_Click);
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 512);
+            this.Controls.Add(this.abgelaufende);
+            this.Controls.Add(this.laufende);
             this.Controls.Add(this.termine_btn);
             this.Controls.Add(this.loeschen_btn);
             this.Controls.Add(this.speichern_btn);
@@ -106,6 +128,8 @@
         private System.Windows.Forms.Button loeschen_btn;
         private System.Windows.Forms.Button termine_btn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button laufende;
+        private System.Windows.Forms.Button abgelaufende;
     }
 }
 

@@ -99,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller.cs" />
+    <Compile Include="Terminauswahl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminauswahl.Designer.cs">
+      <DependentUpon>Terminauswahl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Termine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Terminauswahl.resx">
+      <DependentUpon>Terminauswahl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Termine.resx">
       <DependentUpon>Termine.cs</DependentUpon>
     </EmbeddedResource>
