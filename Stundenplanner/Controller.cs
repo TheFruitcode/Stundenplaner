@@ -118,6 +118,25 @@ namespace Stundenplanner
         {
             LaufendeAufgaben laufendeAufgaben = new LaufendeAufgaben();
             laufendeAufgaben.Show();
+
+            try
+            {
+                if (DateTime.Now.Date <= ) {
+                    conn.Open();
+                    MySqlCommand mycommand = conn.CreateCommand();
+                    mycommand.CommandText = "Select ID_Termine, Datum, Beschreibung from TerminSpeichern order by Datum;";
+                    MySqlDataReader reader = mycommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        termine.addTermin(reader.GetInt64(0).ToString(), reader.GetDateTime(1).ToShortDateString(), reader.GetString(2));
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }
