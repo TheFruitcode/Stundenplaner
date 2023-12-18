@@ -38,25 +38,12 @@ namespace Stundenplanner
 
         private void loeschen_btn_Click(object sender, EventArgs e)
         {
-
+            controller.Loeschen();
         }
 
         private void termine_btn_Click(object sender, EventArgs e)
         {
-
-        }
-    }
-
-    public partial class Form2 : Form
-    {
-        public Form2()
-        {
-            InitializeLifetimeService();
-        }
-
-        private void From2_Load (object sender, EventArgs e)
-        {
-
+            controller.Termin();
         }
     }
 }
