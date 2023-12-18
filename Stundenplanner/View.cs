@@ -12,6 +12,7 @@ namespace Stundenplanner
 {
     public partial class View : Form
     {
+        Controller controller = new Controller();
         public View()
         {
             InitializeComponent();
@@ -27,23 +28,25 @@ namespace Stundenplanner
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void speichern_btn_Click(object sender, EventArgs e)
+        {
+            string calender = Calender.SelectionRange.Start.Year.ToString() + "-" + Calender.SelectionRange.Start.Month.ToString() + "-" + Calender.SelectionRange.Start.Day.ToString();
+            string terminbeschreibung = Terminbeschreibung.Text;
+
+            controller.Speichern(calender, terminbeschreibung);
+        }
+
+        private void loeschen_btn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void termine_btn_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.Show();
         }
     }
- 
+
     public partial class Form2 : Form
     {
         public Form2()
