@@ -129,7 +129,6 @@ namespace Stundenplanner
                 {
                     termine.addTermin(reader.GetInt64(0).ToString(), reader.GetDateTime(1).ToShortDateString(), reader.GetString(2));
                 }
-                mycommand.ExecuteNonQuery();
                 conn.Close();
             }
             catch (Exception e)
