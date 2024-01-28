@@ -10,13 +10,20 @@ using System.Windows.Forms;
 
 namespace Stundenplanner
 {
-    public partial class View : Form
+    public partial class View : Form, IView
     {
-        Controller controller = new Controller();
+
+        private IModel model;
+        private IController controller;
+
+        //Controller controller = new Controller();
         public View()
         {
             InitializeComponent();
         }
+
+        IModel IView.Model { get => model; set => model = value; }
+        IController IView.Controller { get => controller; set => controller = value; }
 
         private void speichern_btn_Click(object sender, EventArgs e)
         {

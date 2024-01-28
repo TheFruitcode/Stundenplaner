@@ -1,8 +1,7 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,63 +9,32 @@ using System.Windows.Forms;
 
 namespace Stundenplanner
 {
-    public class Controller
+    public class Controller : IController
     {
-        Termine termine;
+        private IModel model;
+        private IView view;
+
         public Controller()
         {
-            conn = new MySqlConnection(myConnectionString);
+
         }
 
-        private string myConnectionString = "server=localhost; uid=root; pwd=; database=stundenplaner; Convert Zero Datetime=True;";
+        IModel IController.Model { get => model; set => model = value; }
+        IView IController.View { get => view; set => view = value; }
 
-        MySqlConnection conn;
-
-        public void Speichern(string calender, string terminbeschreibung)
+        public void Delete_Termin(int ID)
         {
-            try
-            {
-                conn.Open();
-
-                MySqlCommand mycommand = conn.CreateCommand();
-
-                mycommand.CommandText = "Insert into TerminSpeichern (Datum, Beschreibung) values('" + calender + "',' " + terminbeschreibung + "');";
-
-                mycommand.ExecuteNonQuery();
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+            throw new NotImplementedException();
         }
 
-        public void Termin()
+        public void laufend()
         {
-            termine = new Termine(this);
-            termine.Show();
-
-            try
-            {
-                conn.Open();
-                MySqlCommand mycommand = conn.CreateCommand();
-                mycommand.CommandText = "Select ID_Termine, Datum, Beschreibung from TerminSpeichern order by Datum;";
-                MySqlDataReader reader = mycommand.ExecuteReader();
-                while (reader.Read())
-                {
-                    termine.addTermin(reader.GetInt64(0).ToString(), reader.GetDateTime(1).ToShortDateString(), reader.GetString(2));
-                }
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+            throw new NotImplementedException();
         }
 
         public string Loeschen()
         {
-            return "";
+            throw new NotImplementedException();
         }
 
         public void Terminauswahl_open()
@@ -75,67 +43,15 @@ namespace Stundenplanner
             terminauswahl.Show();
         }
 
-        public void Delete_Termin(int ID)
+        void IController.Speichern(string calender, string terminbeschreibung)
         {
-            try
-            {
-                conn.Open();
-                MySqlCommand mycommand = conn.CreateCommand();
-                mycommand.CommandText = "Delete from TerminSpeichern where ID_Termine = "+ ID.ToString() +";";
-                mycommand.ExecuteNonQuery();
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-
-            update_Termine();
+            model.Speichern(calender, terminbeschreibung);
+        }
+        void IController.Termin()
+        {
+            model.Termin();
         }
 
-        public void update_Termine()
-        {
-            termine.clear_Termine();
-            try
-            {
-                conn.Open();
-                MySqlCommand mycommand = conn.CreateCommand();
-                mycommand.CommandText = "Select ID_Termine, Datum, Beschreibung from TerminSpeichern order by Datum;";
-                MySqlDataReader reader = mycommand.ExecuteReader();
-                while (reader.Read())
-                {
-                    termine.addTermin(reader.GetInt64(0).ToString(), reader.GetDateTime(1).ToShortDateString(), reader.GetString(2));
-                }
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-        }
-
-        public void laufend()
-        {
-            LaufendeAufgaben laufendeAufgaben = new LaufendeAufgaben();
-            laufendeAufgaben.Show();
-
-            try
-            {
-                conn.Open();
-                MySqlCommand mycommand = conn.CreateCommand();
-                mycommand.CommandText = "Select ID_Termine, Datum, Beschreibung from TerminSpeichern where Datum > '" + DateTime.Now.Date.ToString() + "';";
-                MySqlDataReader reader = mycommand.ExecuteReader();    
-                while (reader.Read())
-                {
-                    termine.addTermin(reader.GetInt64(0).ToString(), reader.GetDateTime(1).ToShortDateString(), reader.GetString(2));
-                }
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-        }
     }
 }
 

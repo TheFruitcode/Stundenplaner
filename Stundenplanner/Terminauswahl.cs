@@ -12,7 +12,10 @@ namespace Stundenplanner
 {
     public partial class Terminauswahl : Form
     {
-        Controller controller;
+        //Controller controller;
+
+        private IController controller;
+
         public Terminauswahl(Controller c)
         {
             InitializeComponent();

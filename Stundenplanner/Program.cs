@@ -8,6 +8,10 @@ namespace Stundenplanner
 {
     internal static class Program
     {
+        private static IModel model;
+        private static IView view;
+        private static IController controller;
+
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
@@ -16,7 +20,21 @@ namespace Stundenplanner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View());
+
+            model = new ModelXML();
+            view = new View();
+            controller = new Controller();
+
+            view.Controller = controller;
+            view.Model = model;
+
+            controller.Model = model;
+            controller.View = view;
+
+            model.Controller = controller;
+            model.View = view;
+
+            Application.Run((View)view);
         }
     }
 }
