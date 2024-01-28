@@ -26,13 +26,22 @@ namespace Stundenplanner
             XDocument doc = new XDocument(
                 new XElement("Stundenplaner",
                     new XElement("Termine",
-                        new XElement("TerminID", ""),
-                        new XElement("Terminbeschreibung", ""),
-                        new XElement("Datum", "")
+                        new XElement("TerminID", "1"),
+                        new XElement("Terminbeschreibung", "Für Klausur lernen"),
+                        new XElement("Datum", "01.02.2024")
                             )
                      )
                              );
             doc.Save("Termindaten.xml");
+
+            //XDocument doc = XDocument.Load("C:\\Users\\Falco\\Source\\Repos\\Stundenplaner\\Stundenplanner\\Termindaten.xml");
+
+            //XElement root = doc.Root;
+
+            //foreach (XElement e in root.Descendants("Termine"))
+            //{
+            //    Console.WriteLine(e.Value);
+            //}
         }
     }
 }

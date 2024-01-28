@@ -5,4 +5,24 @@
 		<Terminbeschreibung></Terminbeschreibung>
 		<Datum></Datum>
 	</Termine>
+	<Termine>
+		<TerminID>1</TerminID>
+		<Terminbeschreibung>Für Klausur lernen</Terminbeschreibung>
+		<Datum>01.02.2024</Datum>
+	</Termine>
+	<Termine>
+		<TerminID>2</TerminID>
+		<Terminbeschreibung>Zum Zahnarzt gehen</Terminbeschreibung>
+		<Datum>06.02.2024</Datum>
+	</Termine>
+	<Termine>
+		<TerminID>3</TerminID>
+		<Terminbeschreibung>Sport machen</Terminbeschreibung>
+		<Datum>27.01.2024</Datum>
+	</Termine>
+	<Termine>
+		<TerminID>4</TerminID>
+		<Terminbeschreibung>Aufräumen</Terminbeschreibung>
+		<Datum>03.03.2024</Datum>
+	</Termine>
 </Stundenplaner>
