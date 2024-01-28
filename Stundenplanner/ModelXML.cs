@@ -33,15 +33,6 @@ namespace Stundenplanner
                      )
                              );
             doc.Save("Termindaten.xml");
-
-            //XDocument doc = XDocument.Load("C:\\Users\\Falco\\Source\\Repos\\Stundenplaner\\Stundenplanner\\Termindaten.xml");
-
-            //XElement root = doc.Root;
-
-            //foreach (XElement e in root.Descendants("Termine"))
-            //{
-            //    Console.WriteLine(e.Value);
-            //}
         }
     }
 }

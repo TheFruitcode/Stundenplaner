@@ -5,6 +5,7 @@
 		<Terminbeschreibung></Terminbeschreibung>
 		<Datum></Datum>
 	</Termine>
+	<!--
 	<Termine>
 		<TerminID>1</TerminID>
 		<Terminbeschreibung>Für Klausur lernen</Terminbeschreibung>
@@ -25,4 +26,5 @@
 		<Terminbeschreibung>Aufräumen</Terminbeschreibung>
 		<Datum>03.03.2024</Datum>
 	</Termine>
+	-->
 </Stundenplaner>
