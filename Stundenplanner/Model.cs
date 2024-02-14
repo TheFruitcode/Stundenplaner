@@ -50,25 +50,27 @@ namespace Stundenplanner
 
         void IModel.Termin()
         {
-            //termine = new Termine(this);
-            termine.Show();
+            ////termine = new Termine(this);
+            //termine.Show();
 
-            try
-            {
-                conn.Open();
-                MySqlCommand mycommand = conn.CreateCommand();
-                mycommand.CommandText = "Select ID_Termine, Datum, Beschreibung from TerminSpeichern order by Datum;";
-                MySqlDataReader reader = mycommand.ExecuteReader();
-                while (reader.Read())
-                {
-                    termine.addTermin(reader.GetInt64(0).ToString(), reader.GetDateTime(1).ToShortDateString(), reader.GetString(2));
-                }
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
+            //try
+            //{
+            //    conn.Open();
+            //    MySqlCommand mycommand = conn.CreateCommand();
+            //    mycommand.CommandText = "Select ID_Termine, Datum, Beschreibung from TerminSpeichern order by Datum;";
+            //    MySqlDataReader reader = mycommand.ExecuteReader();
+            //    while (reader.Read())
+            //    {
+            //        termine.addTermin(reader.GetInt64(0).ToString(), reader.GetDateTime(1).ToShortDateString(), reader.GetString(2));
+            //    }
+            //    conn.Close();
+            //}
+            //catch (Exception e)
+            //{
+            //    MessageBox.Show(e.Message);
+            //}
+
+
         }
 
         string IModel.Loeschen()
